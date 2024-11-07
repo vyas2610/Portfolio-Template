@@ -1,13 +1,13 @@
 import React from "react";
 import Avatar from '@mui/material/Avatar';
-import Card from '@mui/material/Card';
-import CardMedia from '@mui/material/CardMedia';
+// import Card from '@mui/material/Card';
+// import CardMedia from '@mui/material/CardMedia';
 
 const Header = () =>
     {
         return(
-            <div className="text-center">
-                <img src="./images/darkmode.svg" alt="Darkmode-Toggle" className="justify-self-end mt-2"/>
+            <div className="text-center bg-white">
+                <img src="./images/darkmode.svg" alt="Darkmode-Toggle" className="justify-self-end mt-2 pr-9 pt-6"/>
                 <div>
                 <Avatar alt="Travis Howard" src="./images/avtaar.jpg" className="justify-self-center mt-4" />
                 </div>

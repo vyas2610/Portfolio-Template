@@ -26,3 +26,8 @@
 .image:hover {
   transform: rotate(2deg);
 }
+
+.containers {
+  width: 60%;
+  margin: auto;
+}
