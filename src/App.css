@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  background: linear-gradient(45deg, #2f4f4f, #3c6e71, #284b63);
+  color: white;
+  padding: 5px 10px;
+  font-size: medium;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, #284b63, #3c6e71);
+}
+
+.img-1 {
+  transform: rotate(-2deg);
+}
+.img-2 {
+  transform: rotate(2deg);
+}
+.image:hover {
+  transform: rotate(2deg);
+}
