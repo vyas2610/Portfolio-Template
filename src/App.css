@@ -14,7 +14,8 @@
 }
 
 .btn:hover {
-  background: linear-gradient(45deg, #284b63, #3c6e71);
+  background: linear-gradient(90deg, #284b63, #3c6e71);
+  transition: background 0.3s ease;
 }
 
 .img-1 {
