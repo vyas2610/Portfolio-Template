@@ -6,8 +6,8 @@ import { Main } from "./components/Main";
 
 function App() {
   return (
-    <div className='bg-slate-50'>
-      <div className="containers px-4">
+    <div className='bg-slate-50 max-w-full'>
+      <div className="containers  px-4">
           <Header />
           <Main />
       </div>
