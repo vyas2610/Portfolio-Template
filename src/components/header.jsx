@@ -30,14 +30,14 @@ const Header = () => {
       <div className=" h-50 w-4/5 m-auto mt-2 ">
         <div className="md:flex md:flex-row  gap-5 sm:flex sm:flex-col  sm:justify-self-center">
 
-          <div className={`lg:w-60 lg:h-48 md:w-52 md:h-40 sm:w-60 sm:h-40 ${isHovered ? 'img1' : ''}`} onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut}>
+          <div className={`lg:w-60 lg:h-44 md:w-52 md:h-40 sm:w-60 sm:h-40 ease-in-out ${isHovered ? 'img-1' : ''}`} onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut}>
             <img
               src="./images/slider3.jpg"
               alt=""
               className="w-full h-full rounded-lg my-5 "
             />
           </div>
-          <div className={`lg:w-60 lg:h-48 md:w-52 md:h-40 sm:w-60 sm:h-40 ${isHovered ? 'img2' : ''}`} onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut}>
+          <div className={`lg:w-60 lg:h-44 md:w-52 md:h-40 sm:w-60 sm:h-40 ease-in-out ${isHovered ? 'img-2' : ''}`} onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut}>
             <img
               src="./images/slider2.jpg"
               alt=""
@@ -45,7 +45,7 @@ const Header = () => {
             />
           </div>
 
-          <div className={`lg:w-60 lg:h-48 md:w-52 md:h-40 sm:w-60 sm:h-40 ${isHovered ? 'img1' : ''}`} onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut}>
+          <div className={`lg:w-60 lg:h-44 md:w-52 md:h-40 sm:w-60 sm:h-40 ease-in-out  ${isHovered ? 'img-1' : ''}`} onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut}>
             <img 
               src="./images/slider1.jpg"
               alt=""
