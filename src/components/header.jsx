@@ -2,18 +2,28 @@ import React, {useState} from "react";
 import Avatar from "@mui/material/Avatar";
 
 const Header = () => {
+  //Defined a state to manage the isHovered
   const [isHovered, setIsHovered] = useState(true);
 
- const handleMouseOver = () => setIsHovered(false);
+  //Function to handle Mousehover
+  const handleMouseOver = () => setIsHovered(false);
   const handleMouseOut = () => setIsHovered(true);
 
+  //Defined a state to manage the isToggled
+  const [isToggled, setIsToggled] = useState(true);
+
+  //Function to handle Toggle 
+  const handleToggle = () => {
+    setIsToggled(!isToggled); // Toggle between true and false
+  };
 
   return (
-    <div className="text-center bg-white ">
+    <div className={`text-center  ${isToggled ? 'bg-white' : 'bg-slate-800'}`}>
       <img
         src="./images/darkmode.svg"
         alt="Darkmode-Toggle"
-        className="justify-self-end mt-2 pr-9 pt-6"
+        className="justify-self-end mt-2 pr-9 pt-6 cursor-pointer"
+        onClick={handleToggle} 
       />
       <div>
         <Avatar
@@ -22,11 +32,11 @@ const Header = () => {
           className="justify-self-center mt-4"
         />
       </div>
-      <h1 className="text-slate-700 font-bold text-3xl pt-4">Jordan Walker</h1>
+      <h1 className={`font-bold text-3xl pt-4 ${isToggled ? 'text-slate-700' : 'text-white'}`}>Jordan Walker</h1>
       <p className="text-slate-500 font-sans pt-3">
         Frontend developer and community builder for NYC us
       </p>
-      <button className="btn mt-4">Available for Work</button>
+      <button className={`mt-4  ${isToggled ? 'btn' : 'btndark'}`}>Available for Work</button>
       <div className=" h-50 w-4/5 m-auto mt-2 ">
         <div className="md:flex md:flex-row  gap-5 sm:flex sm:flex-col  sm:justify-self-center">
 

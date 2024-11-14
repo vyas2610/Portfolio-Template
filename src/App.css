@@ -18,6 +18,23 @@
   transition: background 0.3s ease;
 }
 
+.btndark {
+  background: linear-gradient(90deg, #d4d4d4, #ffffff);
+  border: none;
+  border-radius: 20px;
+  color: #334155;
+  padding: 5px 10px;
+  font-size: medium;
+  font-weight: 600;
+  cursor: pointer;
+  /* box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2),
+    -4px -4px 10px rgba(255, 255, 255, 0.5); */
+  transition: background 0.5s ease;
+}
+.btndark:hover {
+  background: linear-gradient(90deg, #ffffff, #d4d4d4);
+  transition: background 0.3s ease;
+}
 .img-1 {
   transform: rotate(-2deg);
 }

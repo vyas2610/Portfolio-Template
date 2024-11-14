@@ -1,9 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import Avatar from "@mui/material/Avatar";
 export const Main = () => {
+  //Defined a state to manage the isToggled
+  const [isToggled, setIsToggled] = useState(true);
+
+  //Function to handle Toggle 
+  const handleToggle = () => {
+    setIsToggled(!isToggled); // Toggle between true and false
+  };
+
   
   return (
-    <div className="bg-white">
+    <div className={`${isToggled ? 'bg-white' : 'bg-slate-800'}`}>
       <h2 className="text-slate-700 pt-9 px-14 pb-4 text-lg font-semibold">
         Experience
       </h2>
