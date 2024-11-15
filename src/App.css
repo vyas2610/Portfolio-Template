@@ -48,6 +48,7 @@
 .containers {
   width: 60%;
   margin: 0px auto;
+  padding: 0;
 }
 body {
   margin: 0;

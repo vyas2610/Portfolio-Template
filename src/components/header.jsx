@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React,{useState} from "react";
 import Avatar from "@mui/material/Avatar";
+import { useTheme, useThemeUpdate } from "./ThemeContext";
 
-import { Main } from "./Main";
 const Header = () => {
   //Defined a state to manage the isHovered
   const [isHovered, setIsHovered] = useState(true);
@@ -10,46 +10,49 @@ const Header = () => {
   const handleMouseOver = () => setIsHovered(false);
   const handleMouseOut = () => setIsHovered(true);
 
-  //Defined a state to manage the isToggled
-  const [isToggled, setIsToggled] = useState(true);
+  const darkTheme = useTheme();
+  const toggleTheme = useThemeUpdate();
 
-  //Function to handle Toggle
-  const handleToggle = () => {
-    setIsToggled(!isToggled); // Toggle between true and false
-  };
+  // //Defined a state to manage the isToggled
+  // const [isToggled, setIsToggled] = useState(true);
+
+  // //Function to handle Toggle
+  // const handleToggle = () => {
+  //   setIsToggled(!isToggled); // Toggle between true and false
+  // };
+
+
 
   return (
     <div
-      className={`text-center h-lvh  ${
-        isToggled ? "bg-white" : "bg-slate-800"
-      }`}
+      className={`sm:h-svh md:h-dvh lg:h-lvh ${darkTheme ? 'bg-white' : 'bg-slate-700'}`} 
     >
-      <img
-        src="./images/darkmode.svg"
-        alt="Darkmode-Toggle"
-        className="justify-self-end mt-2 pr-9 pt-6 cursor-pointer"
-        onClick={handleToggle}
-      />
+          <img
+            src="./images/darkmode.svg"
+            alt="Darkmode-Toggle"
+            className="justify-self-end mt-2 pr-9 pt-6 cursor-pointer"
+            onClick={toggleTheme}
+          />
       <div>
-        <Avatar
-          alt="Travis Howard"
-          src="./images/avtaar.jpg"
-          className="justify-self-center mt-4"
-        />
+          <Avatar
+            alt="Travis Howard"
+            src="./images/avtaar.jpg"
+            className="justify-self-center mt-4"
+          />
       </div>
-      <h1
-        className={`font-bold text-3xl pt-4 ${
-          isToggled ? "text-slate-700" : "text-white"
-        }`}
-      >
-        Jordan Walker
-      </h1>
-      <p className="text-slate-500 font-sans pt-3">
-        Frontend developer and community builder for NYC us
-      </p>
-      <button className={`mt-4  ${isToggled ? "btn" : "btndark"}`}>
-        Available for Work
-      </button>
+          <h1
+            className="font-bold text-3xl pt-4 text-center text-slate-700 "
+          >
+            Jordan Walker
+          </h1>
+          <p className="text-slate-500 font-sans pt-3 text-center">
+            Frontend developer and community builder for NYC us
+          </p>
+      <div className="text-center">
+        <button className="mt-4 btn ">
+          Available for Work
+        </button>
+      </div>
       <div className=" h-50 w-4/5 m-auto mt-2 ">
         <div className="md:flex md:flex-row  gap-5 sm:flex sm:flex-col  sm:justify-self-center">
           <div
@@ -94,7 +97,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <Main></Main>
     </div>
   );
 };
