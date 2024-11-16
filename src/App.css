@@ -37,14 +37,20 @@
 }
 .img-1 {
   transform: rotate(-2deg);
+  transition: ease-in-out 0.4ms;
 }
 .img-2 {
   transform: rotate(2deg);
+  transition: ease-in-out 0.4ms;
 }
-.image:hover {
+.img-3 {
+  transform: rotate(-2deg);
+  transition: ease-in-out 0.4ms;
+}
+.img-4 {
   transform: rotate(2deg);
+  transition: ease-in-out 0.4ms;
 }
-
 .containers {
   width: 60%;
   margin: 0px auto;

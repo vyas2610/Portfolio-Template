@@ -24,7 +24,9 @@ export function ThemeProvider({children}) {
     return(
         <ThemeContext.Provider value={darkTheme}>
             <ThemeUpdateContext.Provider value={toggleTheme}>
+                <div className='containers '>
                 {children}
+                </div>
             </ThemeUpdateContext.Provider>
         </ThemeContext.Provider>
     )

@@ -13,19 +13,9 @@ const Header = () => {
   const darkTheme = useTheme();
   const toggleTheme = useThemeUpdate();
 
-  // //Defined a state to manage the isToggled
-  // const [isToggled, setIsToggled] = useState(true);
-
-  // //Function to handle Toggle
-  // const handleToggle = () => {
-  //   setIsToggled(!isToggled); // Toggle between true and false
-  // };
-
-
-
   return (
     <div
-      className={`sm:h-svh md:h-dvh lg:h-lvh ${darkTheme ? 'bg-white' : 'bg-slate-700'}`} 
+      className={` ${darkTheme ? 'bg-white' : 'bg-slate-800'}`} 
     >
           <img
             src="./images/darkmode.svg"
@@ -41,7 +31,7 @@ const Header = () => {
           />
       </div>
           <h1
-            className="font-bold text-3xl pt-4 text-center text-slate-700 "
+            className={`font-bold text-3xl pt-4 text-center ${darkTheme ? 'text-slate-700' : 'text-white'}`}
           >
             Jordan Walker
           </h1>
@@ -49,14 +39,14 @@ const Header = () => {
             Frontend developer and community builder for NYC us
           </p>
       <div className="text-center">
-        <button className="mt-4 btn ">
+        <button className={`mt-4 ${darkTheme ? 'btn' : 'btndark'}`}>
           Available for Work
         </button>
       </div>
       <div className=" h-50 w-4/5 m-auto mt-2 ">
-        <div className="md:flex md:flex-row  gap-5 sm:flex sm:flex-col  sm:justify-self-center">
+        <div className="md:flex md:flex-row md:gap-3  gap-5 sm:flex sm:flex-col  sm:justify-self-center">
           <div
-            className={`lg:w-60 lg:h-44 md:w-52 md:h-40 sm:w-60 sm:h-40 ease-in-out ${
+            className={`lg:w-64 lg:h-44 md:w-40 md:h-28 sm:w-60 sm:h-40 ease-in-out ${
               isHovered ? "img-1" : ""
             }`}
             onMouseEnter={handleMouseOver}
@@ -69,7 +59,7 @@ const Header = () => {
             />
           </div>
           <div
-            className={`lg:w-60 lg:h-44 md:w-52 md:h-40 sm:w-60 sm:h-40 ease-in-out ${
+            className={`lg:w-64 lg:h-44 md:w-40 md:h-28 sm:w-60 sm:h-40 ease-in-out ${
               isHovered ? "img-2" : ""
             }`}
             onMouseEnter={handleMouseOver}
@@ -81,9 +71,8 @@ const Header = () => {
               className="w-full h-full rounded-lg my-5 "
             />
           </div>
-
           <div
-            className={`lg:w-60 lg:h-44 md:w-52 md:h-40 sm:w-60 sm:h-40 ease-in-out  ${
+            className={`lg:w-64 lg:h-44 md:w-40 md:h-28 sm:w-60 sm:h-40 ease-in-out  ${
               isHovered ? "img-1" : ""
             }`}
             onMouseEnter={handleMouseOver}
