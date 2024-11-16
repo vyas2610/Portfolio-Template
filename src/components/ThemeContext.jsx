@@ -24,9 +24,11 @@ export function ThemeProvider({children}) {
     return(
         <ThemeContext.Provider value={darkTheme}>
             <ThemeUpdateContext.Provider value={toggleTheme}>
-                <div className='containers '>
+            <div className={`mt-0 max-w-full ${darkTheme ? 'bg-slate-50' : 'bg-slate-900'}`}>
+                <div className="containers  md:px-4 sm:px-10">
                 {children}
                 </div>
+            </div>
             </ThemeUpdateContext.Provider>
         </ThemeContext.Provider>
     )
