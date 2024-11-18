@@ -2,6 +2,11 @@ import React, {useState} from "react";
 import Avatar from "@mui/material/Avatar";
 import {  useTheme} from "./ThemeContext";
 
+// NewsLatter Imports
+import Paper from '@mui/material/Paper';
+import InputBase from '@mui/material/InputBase';
+import IconButton from '@mui/material/IconButton';
+
 
 
  const Main = () => { 
@@ -157,6 +162,39 @@ import {  useTheme} from "./ThemeContext";
           <h2 className={`pt-12 px-14 pb-4 text-lg font-bold ${darkTheme ? 'text-slate-700' : 'text-white'}`}>
             Let's Connect
           </h2>
+          <div className={`mailbox place-items-center ${darkTheme ? 'bg-gray-100' : 'bg-slate-700'}`}>
+            <div className={`pt-3 `}>
+                <Paper
+                    component="form"
+                    sx={{ paddingLeft: '6px', display: 'flex', alignItems: 'center', width: 525, backgroundColor:`${darkTheme ? '#ffffff' : '#1e293b'}` }}
+                >
+            
+                    <InputBase
+                      sx={{ ml: 1, flex: 1, color:'#9ca3af'}}
+                      placeholder="Enter Your Email..."
+                      inputProps={{ 'aria-label': 'Enter your email' }}
+                    />
+                    <IconButton type="button" sx={{ p: '10px' }} >
+                      {/* place my button here */}
+                      <button className={` ${darkTheme ? 'btn' : 'btndark'}`}>
+                                  Join Newsletter
+                        </button>
+                    </IconButton>
+                </Paper>
+            </div>
+          </div>
+      {/* Footer Section */}
+        <div className="place-items-center">
+            {/* Font Div */}
+            <div className={`foot-font ${darkTheme ? 'text-slate-800' : 'text-gray-100'}`}>PA</div>
+            {/* Social Icons */}
+            <div className="flex gap-3 pb-2 ">
+
+            <Avatar alt="X" src="./images/x-icon.svg" sx={{width:35, height:35}}/>
+            <Avatar alt="Git" src="" sx={{width:35, height:35}}/>
+            <Avatar alt="Facebook" src="/static/images/avatar/1.jpg" sx={{width:35, height:35}}/>
+            </div>
+        </div>
     </div>
   );
 };
