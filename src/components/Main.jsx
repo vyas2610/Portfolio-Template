@@ -165,11 +165,11 @@ import GitHubIcon from '@mui/icons-material/GitHub';
           <h2 className={`pt-12 px-14 pb-4 text-lg font-bold ${darkTheme ? 'text-slate-700' : 'text-white'}`}>
             Let's Connect
           </h2>
-          <div className={`mailbox place-items-center ${darkTheme ? 'bg-gray-100' : 'bg-slate-700'}`}>
-            <div className={`pt-3 `}>
+          <div className={`rounded-md md:w-11/12 lg:w-4/5 place-self-center ${darkTheme ? 'bg-gray-100' : 'bg-slate-700'}`}>
+            <div className={`pt-2 pb-2 container mx-auto md:w-80 lg:w-5/6`}>
                 <Paper
                     component="form"
-                    sx={{ paddingLeft: '6px', display: 'flex', alignItems: 'center', width: 525, backgroundColor:`${darkTheme ? '#ffffff' : '#1e293b'}` }}
+                    sx={{ paddingLeft: '6px', display: 'flex', alignItems: 'center', backgroundColor:`${darkTheme ? '#ffffff' : '#1e293b'}` }}
                 >
             
                     <InputBase
@@ -178,7 +178,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
                       inputProps={{ 'aria-label': 'Enter your email' }}
                     />
                     <IconButton type="button" sx={{ p: '10px' }} >
-                      {/* place my button here */}
+                    
                       <button className={` ${darkTheme ? 'btn' : 'btndark'}`}>
                                   Join Newsletter
                         </button>
@@ -188,10 +188,10 @@ import GitHubIcon from '@mui/icons-material/GitHub';
           </div>
       {/* Footer Section */}
         <div className="place-items-center">
-            {/* Font Div */}
+            
             <div className={`foot-font ${darkTheme ? 'text-slate-800' : 'text-gray-100'}`}>PA</div>
-            {/* Social Icons */}
-            <div className="flex gap-3 pb-2 cursor-pointer">
+            
+            <div className="flex gap-3 pb-2 cursor-">
 
             <Avatar alt="X"  sx={{width:35, height:35, backgroundColor:`${darkTheme ? '#f9fafb ' : ' #334155'}`, color:`${darkTheme ? '#334155' : '#f9fafb'}` }}>
                 <XIcon />
