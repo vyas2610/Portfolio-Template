@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Avatar from "@mui/material/Avatar";
 import { useTheme, useThemeUpdate } from "./ThemeContext";
 
@@ -14,32 +14,32 @@ const Header = () => {
   const toggleTheme = useThemeUpdate();
 
   return (
-    <div
-      className={` ${darkTheme ? 'bg-white ' : 'bg-slate-800'}`} 
-    >
-          <img
-            src="./images/darkmode.svg"
-            alt="Darkmode-Toggle"
-            className="justify-self-end mt-2 pr-9 pt-6 cursor-pointer"
-            onClick={toggleTheme}
-          />
+    <div className={` ${darkTheme ? "bg-white " : "bg-slate-800"} `}>
+      <img
+        src="./images/darkmode.svg"
+        alt="Darkmode-Toggle"
+        className="justify-self-end mt-2 pr-9 pt-6 cursor-pointer"
+        onClick={toggleTheme}
+      />
       <div>
-          <Avatar
-            alt="Travis Howard"
-            src="./images/avtaar.jpg"
-            className="justify-self-center mt-4"
-          />
+        <Avatar
+          alt="Travis Howard"
+          src="./images/avtaar.jpg"
+          className="justify-self-center mt-4"
+        />
       </div>
-          <h1
-            className={`font-bold text-3xl pt-4 text-center ${darkTheme ? 'text-slate-700' : 'text-white'}`}
-          >
-            Jordan Walker
-          </h1>
-          <p className="text-slate-500 font-sans pt-3 text-center">
-            Frontend developer and community builder for NYC us
-          </p>
+      <h1
+        className={`font-bold text-3xl pt-4 text-center ${
+          darkTheme ? "text-slate-700" : "text-white"
+        }`}
+      >
+        Jordan Walker
+      </h1>
+      <p className="text-slate-500 font-sans pt-3 text-center">
+        Frontend developer and community builder for NYC us
+      </p>
       <div className="text-center">
-        <button className={`mt-4 ${darkTheme ? 'btn' : 'btndark'}`}>
+        <button className={`mt-4 ${darkTheme ? "btn" : "btndark"}`}>
           Available for Work
         </button>
       </div>
