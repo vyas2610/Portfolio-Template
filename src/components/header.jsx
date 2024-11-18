@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <div
-      className={` ${darkTheme ? 'bg-white' : 'bg-slate-800'}`} 
+      className={` ${darkTheme ? 'bg-white ' : 'bg-slate-800'}`} 
     >
           <img
             src="./images/darkmode.svg"

@@ -7,7 +7,10 @@ import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
 
-
+//Icon Import
+import XIcon from '@mui/icons-material/X';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
  const Main = () => { 
   const darkTheme = useTheme();
@@ -188,12 +191,19 @@ import IconButton from '@mui/material/IconButton';
             {/* Font Div */}
             <div className={`foot-font ${darkTheme ? 'text-slate-800' : 'text-gray-100'}`}>PA</div>
             {/* Social Icons */}
-            <div className="flex gap-3 pb-2 ">
+            <div className="flex gap-3 pb-2 cursor-pointer">
 
-            <Avatar alt="X" src="./images/x-icon.svg" sx={{width:35, height:35}}/>
-            <Avatar alt="Git" src="" sx={{width:35, height:35}}/>
-            <Avatar alt="Facebook" src="/static/images/avatar/1.jpg" sx={{width:35, height:35}}/>
+            <Avatar alt="X"  sx={{width:35, height:35, backgroundColor:`${darkTheme ? '#f9fafb ' : ' #334155'}`, color:`${darkTheme ? '#334155' : '#f9fafb'}` }}>
+                <XIcon />
+            </Avatar>
+            <Avatar alt="Git"  sx={{width:35, height:35, backgroundColor:`${darkTheme ? '#f9fafb ' : ' #334155'}`, color:`${darkTheme ? '#334155' : '#f9fafb'}`}}>
+                <GitHubIcon />
+            </Avatar>
+            <Avatar alt="LinkedIn"  sx={{width:35, height:35, backgroundColor:`${darkTheme ? '#f9fafb ' : ' #334155'}`, color:`${darkTheme ? '#334155' : '#f9fafb'}`}}>
+              <LinkedInIcon />
+            </Avatar>           
             </div>
+            <p className="text-gray-500 pt-1 pb-1">© Piyush Aswani. All rights reserved.</p>
         </div>
     </div>
   );
